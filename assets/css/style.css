@@ -1,5 +1,7 @@
 @import "./_reboot.css";
 @import "./header.css";
+@import "./main.css";
+
 
 @font-face {
   font-family: 'BMWTypeNext-Light';
@@ -14,7 +16,7 @@
 }
 
 body {
-  margin: auto;
+  margin: 0 auto;
   width: 1440px;
   font-family: BMWTypeNext-Light;
 }

@@ -1,5 +1,6 @@
 #banner {
     position: absolute;
+    bottom: 0;
     padding-left: 10vw;
     padding-right: 10vw;
     left: 0%;
@@ -21,7 +22,20 @@
     height: fit-content;
     font-size: 30px;
   }
-  #bannerTexts {
+
+  #bannerNav {
+    line-height: 41px;
+  }
+
+  #bannerTitle {
+    font-size: 48px;
+  }
+
+  #bannerText {
+    font-size: 24px;
+  }
+
+  .lightText {
     font-family: BMWTypeNext-Light;
   }
   
@@ -73,35 +87,11 @@
     right: 0;
     bottom: 0;
     text-align: center;
-    width:32px;
-    height:32px;
+    width:59.2%;
+    height:59.2%;
     z-index: 2;
   }
-  
-  #bmw {
-    border-radius: 100%;
-    border: 2px solid white;
-    position: absolute;
-    right: 0;
-    width:54px;
-    height:54px;
-  }
-  
-  #bmw .circle-inner {
-    border-radius: 100%;
-    background-color: white;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-    width:32px;
-    height:32px;
-    z-index: 2;
-  }
-  
+
   #bmw span {
     font-size: 9px;
     position: absolute;
@@ -110,19 +100,19 @@
   
   #bmw .b {
     transform: rotate(-45deg);
-    left: 7px;
-    top: 5px;
+    left: 15%;
+    top: 9.26%;
   }
   
   #bmw .m {
-    left: 21px;
-    top: -2px;
+    left: 42%;
+    top: -1.7%;
   }
   
   #bmw .w {
     transform: rotate(45deg);
-    left:36px;
-    top: 5px;
+    left:69%;
+    top: 9.26%;
   }
   
   #bmw .shape {
@@ -249,11 +239,35 @@
     #banner {
       background-position: 66% 0%;
       background-size: 144%;
-      padding-left: 3.4vw;
-      padding-right: 3.4vw;
+      padding-left: 4vw;
+      padding-right: 4vw;
     }
   
     #bannerNav{
       display: none !important;
     }
   }
+
+@media only screen and (max-width: 574px) {
+
+  #bannerTextsDiv {
+    margin: 0 auto;
+  }
+
+  #bannerTitle {
+    font-size: 34px;
+  }
+
+  #bannerText {
+    font-size: 19px;
+  }
+
+  #bmw {
+    width: 36px;
+    height: 36px;
+  }
+
+  #bmw span {
+    font-size: 5px;
+  }
+}

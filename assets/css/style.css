@@ -1,6 +1,8 @@
 @import "./_reboot.css";
 @import "./header.css";
-@import "./main.css";
+@import "./utils.css";
+@import "./calculate-savings/section-findYour.css";
+@import "./calculate-savings/section-01.css";
 
 
 @font-face {
@@ -13,10 +15,4 @@
   font-family: 'BMWTypeNext-Bold';
   src:  url('../fonts/BMWTypeNext-Bold.woff2') format('woff2');
   src:  url('../fonts/BMWTypeNext-Bold.woff2') format('woff');
-}
-
-body {
-  margin: 0 auto;
-  width: 1440px;
-  font-family: BMWTypeNext-Light;
 }

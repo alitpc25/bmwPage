@@ -1,0 +1,28 @@
+.section-01 {
+    max-width: 1440px;
+    margin:0 auto;
+    padding: 0 4%;
+}
+
+.group01 {
+    max-width: 832px;
+    margin-top: 3%;
+}
+
+.group01-title {
+    height: fit-content;
+    font-size: 28px;
+    line-height: 49px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    margin-left: -1px;
+}
+
+.group01-texts {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.4px;
+    color: #262626;
+}

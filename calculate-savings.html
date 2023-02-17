@@ -15,11 +15,11 @@
 
 <body>
     <header>
-        <div id="banner" class="d-flex flex-column mx-auto text-white">
-            <div class="d-flex justify-content-start align-items-center">
-                <nav>
-                    <div id="main">
-                        <div id="menuButton" class="container" onclick="openNav()">
+        <div class="banner">
+            <div class="banner-container text-white">
+                <div class="navigation-bar d-flex flex-column justify-content-center align-items-center">
+                    <div class="navigation d-flex align-items-center justify-content-between">
+                        <div id="menuButton" onclick="openNav()">
                             <div class="bar"></div>
                             <div class="bar"></div>
                             <div class="bar"></div>
@@ -29,8 +29,8 @@
                                 <div>
                                     BMW Elektrix
                                 </div>
-                                <div id="bmwContainer">
-                                    <div id="bmw" style="border: 2px solid#6F6F6F;">
+                                <div class="logoContainer logo-54">
+                                    <div class="logo logo-54" style="border: 2px solid#6F6F6F;">
                                         <span class="b" style="color:#6F6F6F">B</span>
                                         <span class="m" style="color:#6F6F6F">M</span>
                                         <span class="w" style="color:#6F6F6F">W</span>
@@ -89,77 +89,94 @@
                                 </div>
                             </div>
                         </div>
+                        <nav class="d-flex justify-content-between align-items-center text-center">
+                            <div class="nav-title">
+                                <span>BMW Elektriğin Öncüleri</span>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#">Harita</a>
+                            </div>
+                            <div class="nav-item nav-item-active">
+                                <a href="#">Tasarrufunuzu Hesaplayın</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#">BMW'de Elektromobilite</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="#">SSS</a>
+                            </div>
+                        </nav>
+                        <div>
+                            <div class="logoContainer logo-54">
+                                <div class="logo logo-54">
+                                    <span class="b">B</span><span class="m">M</span><span class="w">W</span>
+                                    <div class="circle-inner">
+                                        <div class="shape s1"></div>
+                                        <div class="shape s2"></div>
+                                        <div class="shape s3"></div>
+                                        <div class="shape s4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="bannerNav"
-                        class="d-flex justify-content-between align-items-center border-bottom collapse navbar-collapse">
-                        <div id="BMWElektrix">
-                            <span>BMW Elektriğin Öncüleri</span>
-                        </div>
-                        <div>
-                            <a href="#">Harita</a>
-                        </div>
-                        <div>
-                            <a href="#">Tasarrufunuzu Hesaplayın</a>
-                        </div>
-                        <div>
-                            <a href="#">BMW'de Elektromobilite</a>
-                        </div>
-                        <div>
-                            <a href="#">SSS</a>
-                        </div>
-                    </div>
-                </nav>
-                <div id="bmwContainer">
-                    <div id="bmw">
-                        <span class="b">B</span><span class="m">M</span><span class="w">W</span>
-                        <div class="circle-inner">
-                            <div class="shape s1"></div>
-                            <div class="shape s2"></div>
-                            <div class="shape s3"></div>
-                            <div class="shape s4"></div>
-                        </div>
+                    <div class="nav-sub-text lightText">
+                        Sheer Driving <span style="font-weight: bold;"> Pleasure</span>
                     </div>
                 </div>
-            </div>
-            <div id="bannerTextsDiv" class="lightText">
-                <div id="bannerTitle">BMW ELECTRIFIED.</div>
-                <div id="bannerText">TASARRAFUNUZU HESAPLAYIN.</div>
+                <div class="bannerTextsDiv lightText">
+                    <h1 class="banner-title">BMW ELECTRIFIED.</h1>
+                    <h2 class="banner-text">TASARRAFUNUZU HESAPLAYIN.</h2>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <div id="findYour" class="d-flex flex-column lightText">
-            <div class="title">
-                FIND YOUR BMW ELECTRIC.
-            </div>
-            <div class="texts">
-                <div>
-                    Whether you are considering fully electric or a plug-in hybrid, BMW can help you discover a new way
-                    of
-                    exploring the
-                    world with all the functionality you need. The new electric BMW range brings you the performance and
-                    handling
-                    you expect from BMW with all the styling, detailing and comfort you could wish for.
+        <section class="section-findYour">
+            <div class="findYour d-flex flex-column lightText">
+                <h2 class="findYour-title">
+                    FIND YOUR BMW ELECTRIC.
+                </h2>
+                <div class="findYour-texts">
+                    <h3>
+                        Whether you are considering fully electric or a plug-in hybrid, BMW can help you discover a new
+                        way
+                        of
+                        exploring the
+                        world with all the functionality you need. The new electric BMW range brings you the performance
+                        and
+                        handling
+                        you expect from BMW with all the styling, detailing and comfort you could wish for.
+                    </h3>
+                    <h3>
+                        Alternatively, the BMW Plug-in Hybrid range takes the best of BMW’s combustion engines, using
+                        renowned
+                        EfficientDynamics, and marries it to modern battery technology and an electric motor.
+                    </h3>
+                    <h3>
+                        Is it time to find your BMW Electric?
+                    </h3>
                 </div>
-                <div>
-                    Alternatively, the BMW Plug-in Hybrid range takes the best of BMW’s combustion engines, using
-                    renowned
-                    EfficientDynamics, and marries it to modern battery technology and an electric motor.
-                </div>
-                <div>
-                    Is it time to find your BMW Electric?
-                </div>
             </div>
-        </div>
-        <div id="Group01" class="d-flex flex-column lightText">
-            <div class="title">
-                <span style="color: #BBBBBB;">01</span> TÜKETİM TASARRUFUNUZU HESAPLAYIN.
+        </section>
+        <section class="section-01">
+            <div class="group01 d-flex flex-column lightText">
+                <h2 class="group01-title">
+                    <span style="color: #BBBBBB;">01</span> TÜKETİM TASARRUFUNUZU HESAPLAYIN.
+                </h2>
+                <h3 class="group01-texts">
+                    Choose a BMW Plug-in Hybrid or BMW Electric vehicle that best suits your style and see what you
+                    could
+                    save. Compare a BMW Plug-in Hybrid vehicle against a similar BMW petrol or diesel model across three
+                    pre-selected average journeys. Alternatively, explore the BMW Electric range and use the
+                    all-electric
+                    calculator to personalise your mileage and mile per gallon criteria to discover your indicative fuel
+                    savings. If you're unsure what to compare, select a model and click 'Discover more' to find out some
+                    more details and a brief model overview.
+                </h3>
             </div>
-            <div classs="texts">
-                Choose a BMW Plug-in Hybrid or BMW Electric vehicle that best suits your style and see what you could save. Compare a BMW Plug-in Hybrid vehicle against a similar BMW petrol or diesel model across three pre-selected average journeys. Alternatively, explore the BMW Electric range and use the all-electric calculator to personalise your mileage and mile per gallon criteria to discover your indicative fuel savings. If you're unsure what to compare, select a model and click 'Discover more' to find out some more details and a brief model overview.
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer>

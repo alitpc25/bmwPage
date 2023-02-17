@@ -1,0 +1,29 @@
+.section-findYour {
+    max-width: 1440px;
+    margin:0 auto;
+    padding: 0 4%;
+}
+
+.findYour {
+    max-width: 832px;
+    margin:0 auto;
+    margin-top: 3%;
+}
+
+.findYour-title {
+    font-size: 28px;
+    line-height: 49px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    height: 56px;
+    margin-left: -1px;
+}
+
+.findYour-texts h3 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.4px;
+    color: #262626;
+}

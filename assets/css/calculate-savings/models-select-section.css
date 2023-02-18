@@ -1,5 +1,5 @@
 .parent-slider {
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .swiper-horizontal .parent-swiper-scrollbar {
-    width: 10vw !important;
+    width: 140px !important;
     margin-left: 50%;
     transform: translateX(-50%);
 }
@@ -41,7 +41,7 @@
 
 .slide-content {
     background-color: #F8F8F8;
-    width: 600px;
+    width: clamp(90vw, 600px ,40vw);
     height: 275px;
     font-family: BMWTypeNext-Light;
     margin-bottom: 110px;
@@ -73,6 +73,8 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    transition: 0.3s;
+    width: min(464px, 70vw);
 }
 
 .select-model-button {
@@ -100,6 +102,10 @@
 
 .select-model-button i img {
     width: 17px;
+}
+
+.child-swiper-slide {
+    cursor: pointer;
 }
 
 .child-swiper-slide:hover .select-model-button {

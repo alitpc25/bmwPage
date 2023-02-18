@@ -80,6 +80,10 @@
     bottom: 0;
     border-bottom-right-radius:100%;
   }
+
+  #menuButton {
+    cursor: pointer;
+  }
   
   .bar {
     width: 17px;

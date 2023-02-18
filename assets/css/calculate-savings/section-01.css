@@ -1,18 +1,17 @@
-.section-01 {
-    max-width: 1440px;
-    margin:0 auto;
-    padding: 0 4%;
+.group01 {
+    margin-right: 8vw;
+    padding-bottom: 3%;
 }
 
-.group01 {
-    max-width: 832px;
-    margin-top: 3%;
+.group01 h2 {
+    display: flex;
+    flex-direction: column;
 }
 
 .group01-title {
     height: fit-content;
     font-size: 28px;
-    line-height: 49px;
+    line-height: 38px;
     letter-spacing: -0.5px;
     text-transform: uppercase;
     margin-left: -1px;
@@ -25,4 +24,25 @@
     line-height: 21px;
     letter-spacing: -0.4px;
     color: #262626;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .section-01 {
+        padding-left: 4vw;
+    }
+
+    .group01 {
+        max-width: 1200px;
+        max-height: 155px;
+    }
+
+    .group01 h2 {
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .group01-title {
+        line-height: 49px;
+    }
 }

@@ -1,18 +1,21 @@
-.section-findYour {
+.section-container {
     max-width: 1440px;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 0 4%;
 }
 
+/* Section-findYour */
+
 .findYour {
-    max-width: 832px;
-    margin:0 auto;
-    margin-top: 3%;
+    margin-right: 8vw;
+    margin-top: 5%;
+    padding-bottom: 3%;
 }
 
 .findYour-title {
+    font-weight: 300;
     font-size: 28px;
-    line-height: 49px;
+    line-height: min(38px, fit-content);
     letter-spacing: -0.5px;
     text-transform: uppercase;
     height: 56px;
@@ -26,4 +29,26 @@
     line-height: 21px;
     letter-spacing: -0.4px;
     color: #262626;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .findYour {
+        transition: 0.1s;
+        margin: 3% 6vw 0 18vw;
+        max-width: 958px;
+        padding-right: 12%;
+    }
+
+    .findYour-title {
+        font-size: 36px;
+        line-height: 49px;
+        letter-spacing: -0.5px;
+    }
+
+    .findYour-texts h3 {
+        font-size: 16px;
+        line-height: 21px;
+        letter-spacing: -0.4px;
+    }
 }

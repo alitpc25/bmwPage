@@ -1,29 +1,35 @@
-.swiper {
+.parent-slider {
     width: 100%;
     height: 100%;
-  }
+}
 
-.swiper-slide {
+.parent-swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
-.swiper-horizontal .swiper-scrollbar{
-    width: 10vw!important;
+.swiper-horizontal .parent-swiper-scrollbar {
+    width: 10vw !important;
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
-.swiper-slide img {
-    padding: 0 auto;
-  }
+/* child swiper */
 
-.swiper-button-next:after,.swiper-button-prev:after {
+.child-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
     display: none;
 }
 
-.swiper-button-prev i img, .swiper-button-next i img {
+.swiper-button-prev i img,
+.swiper-button-next i img {
     width: 10px;
     filter: invert(57%) sepia(0%) saturate(142%) hue-rotate(248deg) brightness(99%) contrast(93%);
 }
@@ -34,7 +40,7 @@
     width: 600px;
     height: 275px;
     font-family: BMWTypeNext-Light;
-    margin-bottom: 164px;
+    margin-bottom: 110px;
 }
 
 .slide-texts {
@@ -56,4 +62,66 @@
     font-size: 14px;
     line-height: 19px;
     color: #666666;
+}
+
+.slide-content img {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.select-model-button {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.select-model-button button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 285px;
+    height: 49px;
+    background-color: #1C69D4;
+    padding: 8px 78px 8px 38px;
+    gap: 49px;
+    color: white;
+    font-family: BMWTypeNext-Light;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 33px;
+}
+
+.select-model-button i img {
+    width: 17px;
+}
+
+.child-swiper-slide:hover .select-model-button {
+    visibility: visible;
+} 
+
+.child-swiper-slide:hover .slide-content {
+    background: linear-gradient(180deg, #A74725 0%, #5D0F05 100%);
+}
+
+.child-swiper-slide:hover .slide-content .slide-texts .slide-title {
+    color: white;
+}
+
+.child-swiper-slide:hover .slide-content .slide-texts .slide-text {
+    color: white;
+}
+
+.child-swiper-slide:hover .slide-content img {
+    color: linear-gradient(180deg, #A74725 0%, #5D0F05 100%);
+}
+
+.slide-content .img-top {
+    display: none;
+    z-index: 99;
+}
+.child-swiper-slide:hover .img-top {
+    display: inline;
 }

@@ -11,7 +11,7 @@ function closeNav() {
 const parentSwiper = new Swiper('.parent-slider', {
   // Optional parameters
   direction: 'horizontal',
-  slidesPerView: 3,
+  slidesPerView: 'auto',
   spaceBetween: 18,
   noSwiping: true,
   centeredSlides: true,
@@ -27,8 +27,8 @@ const parentSwiper = new Swiper('.parent-slider', {
 
 const childSwiper = new Swiper(".child-slider", {
   direction: 'horizontal',
-  slidesPerView: 1,
-  noSwiping: false,
+  loop: true,
+  noSwiping: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -38,10 +38,15 @@ const childSwiper = new Swiper(".child-slider", {
 function newImg(e){
   const content = e.getElementsByClassName("slide-content")[0];
   const img = content.getElementsByClassName("slide-img")[0];
+
   img.src = "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (1).png"
+  img.style.width="95%";
+  content.style.background = "linear-gradient(180deg, #A74725 0%, #5D0F05 100%)";
 }
 function oldImg(e){
   const content = e.getElementsByClassName("slide-content")[0];
   const img = content.getElementsByClassName("slide-img")[0];
   img.src = "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1.png"
+  img.style.width="90%";
+  content.style.background = "#F8F8F8";
 }

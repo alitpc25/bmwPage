@@ -34,9 +34,13 @@
     filter: invert(57%) sepia(0%) saturate(142%) hue-rotate(248deg) brightness(99%) contrast(93%);
 }
 
+.parent-swiper-slide {
+    margin-top: 45px;
+    max-width: 600px;
+}
+
 .slide-content {
     background-color: #F8F8F8;
-    margin-top: 45px;
     width: 600px;
     height: 275px;
     font-family: BMWTypeNext-Light;
@@ -102,26 +106,10 @@
     visibility: visible;
 } 
 
-.child-swiper-slide:hover .slide-content {
-    background: linear-gradient(180deg, #A74725 0%, #5D0F05 100%);
-}
-
 .child-swiper-slide:hover .slide-content .slide-texts .slide-title {
     color: white;
 }
 
 .child-swiper-slide:hover .slide-content .slide-texts .slide-text {
     color: white;
-}
-
-.child-swiper-slide:hover .slide-content img {
-    color: linear-gradient(180deg, #A74725 0%, #5D0F05 100%);
-}
-
-.slide-content .img-top {
-    display: none;
-    z-index: 99;
-}
-.child-swiper-slide:hover .img-top {
-    display: inline;
 }

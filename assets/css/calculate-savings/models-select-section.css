@@ -10,7 +10,8 @@
     margin-bottom: 2rem;
 }
 
-.swiper-horizontal .parent-swiper-scrollbar {
+/* SCROLLBAR WORKS WRONG */
+.swiper-scrollbar-horizontal {
     width: 140px !important;
     margin-left: 50%;
     transform: translateX(-50%);

@@ -158,7 +158,7 @@ const showAllModelsFunc = () => {
     scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,
-      dragSize: 30 | "auto"
+      dragSize: (150/datas.length) | "auto"
     },
   });
 
@@ -180,7 +180,6 @@ const showAllModelsFunc = () => {
 
   const childSwiper = new Swiper(".child-slider", {
     direction: 'horizontal',
-    loop: true,
     noSwiping: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -222,13 +221,12 @@ const showOneModelFunc = (types) => {
     scrollbar: {
       el: '.swiper-scrollbar',
       draggable: true,
-      dragSize: 30 | "auto"
+      dragSize: (150/types.length) | "auto"
     },
   });
 
   const childSwiper = new Swiper(".child-slider", {
     direction: 'horizontal',
-    loop: true,
     noSwiping: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -293,10 +291,10 @@ function onMouseOutCard(e) {
   img.src = item.mouseOutImage;
 }
 
-const showAllModels = (e) => {
-  showAllModelsFunc()
-}
-
 const showModel = (e) => {
+  if(e.getElementsByTagName("a")[0].innerHTML === "All") {
+    showAllModelsFunc()
+    return;
+  }
   showOneModelFunc(datas.filter(data => data.model === e.getElementsByTagName("a")[0].innerHTML)[0].types);
 }

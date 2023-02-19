@@ -10,11 +10,12 @@
     margin-bottom: 2rem;
 }
 
-/* SCROLLBAR WORKS WRONG */
-.swiper-scrollbar-horizontal {
-    width: 140px !important;
-    margin-left: 50%;
-    transform: translateX(-50%);
+.swiper-pagination-bullet {
+    width: 30px !important;
+    margin-left: -4px !important;
+	border-radius: 0% !important;
+	text-align: center;
+    background-color: #000 !important;
 }
 
 /* child swiper */

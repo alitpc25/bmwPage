@@ -154,11 +154,9 @@ const showAllModelsFunc = () => {
     noSwiping: true,
     centeredSlides: true,
 
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
-      dragSize: (150/datas.length) | "auto"
+    pagination: {
+      el: '.swiper-pagination',
+			clickable: true,
     },
   });
 
@@ -217,11 +215,9 @@ const showOneModelFunc = (types) => {
     noSwiping: true,
     centeredSlides: true,
 
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
-      dragSize: (150/types.length) | "auto"
+    pagination: {
+      el: '.swiper-pagination',
+			clickable: true,
     },
   });
 

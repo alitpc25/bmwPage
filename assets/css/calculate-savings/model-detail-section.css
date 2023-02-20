@@ -1,11 +1,22 @@
+@keyframes leftToRightSlide {
+    from {width:30%; opacity: 0;}
+    to {width: 100%; opacity: 1;}
+}
+
+.left-to-right-slide-animation {
+    animation: leftToRightSlide 1.5s;
+}
+
 .model-detail-container {
-    background: linear-gradient(180deg, #A74725 0%, #5D0F05 100%);
     max-width: 1187px;
     height: 342px;
     margin: 0 auto;
+    padding-right: 2vw;
     display: flex;
+    padding-left: 3vw;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .model-detail-container .model-detail-img {
@@ -17,12 +28,15 @@
     font-style: normal;
     font-weight: 300;
     font-family: BMWTypeNext-Light;
+    padding: 0;
+    margin: 0;
 }
 
 .model-detail-content {
-    width: 443px;
+    max-width: 500px;
     height: 250px;
-    margin: 0 auto;
+    margin: 0;
+    margin-top: 1.5vw;
 }
 
 .model-detail-content .electricity-option-p {
@@ -48,13 +62,14 @@
     line-height: 18px;
 }
 
-.model-detail-info div {
-    border-left: 1px solid white;
+.model-detail-info {
+    margin-top: 10px;
+    width: 510px;
 }
 
-.model-detail-info {
-    width: 550px;
-    gap: 20px;
+.model-detail-info div {
+    border-left: 1px solid white;
+    padding: 0 16px;
 }
 
 .model-detail-info div p {
@@ -64,4 +79,22 @@
 
 .model-detail-info div:first-child {
     border-left: none;
+    padding-left: 0;
+}
+
+.model-detail-content .discover-more-div p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 20px;
+}
+
+.model-detail-content .discover-more-div {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.model-detail-content .discover-more-div i img {
+    filter: invert(94%) sepia(98%) saturate(0%) hue-rotate(310deg) brightness(103%) contrast(105%);
 }

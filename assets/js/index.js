@@ -18,7 +18,7 @@ const datas = [
             onSelectImage: "assets/images/g0dnnfm5dze6pud7f3qvbjvfmwld 1.png",
           }
         },
-        selectedBackground: "linear-gradient(180deg, #A74725 0%, #5D0F05 100%)",
+        selectedBackground: "linear-gradient(180deg, #5D0F05 0%,  #A74725 100%)",
         title: "Yeni BMW i4",
         text: "i4 eDrive40 - M Sport",
         electricityOption: "All electric",
@@ -42,10 +42,10 @@ const datas = [
           web: {
             mouseOutImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (2).png",
             mouseOverImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 2.png",
-            onSelectImage: "",
+            onSelectImage: "assets/images/g0dnnfm5dze6pud7f3qvbjvfmwld 1 (1).png",
           }
         },
-        selectedBackground: "linear-gradient(180deg, #17265E 0%, #03091C 100%)",
+        selectedBackground: "linear-gradient(180deg, #03091C 0%, #17265E 100%)",
         title: "Yeni BMW i4",
         text: "i4 M50",
         electricityOption: "All electric",
@@ -74,10 +74,10 @@ const datas = [
           web: {
             mouseOutImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (4).png",
             mouseOverImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (3).png",
-            onSelectImage: "",
+            onSelectImage: "assets/images/g0dnnfm5dze6pud7f3qvbjvfmwld 1 (2).png",
           }
         },
-        selectedBackground: "linear-gradient(180deg, #A2A09B 0%, #7B7772 100%)",
+        selectedBackground: "linear-gradient(180deg, #7B7772 0%, #A2A09B 100%)",
         title: "Yeni BMW i7",
         text: "i7 xDrive60 M Sport",
         electricityOption: "All electric",
@@ -105,10 +105,10 @@ const datas = [
           web: {
             mouseOutImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (5).png",
             mouseOverImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (6).png",
-            onSelectImage: "",
+            onSelectImage: "assets/images/fud67x6l0kr2eoms4l562aixzyfe 1.png",
           }
         },
-        selectedBackground: "linear-gradient(180deg, #193F63 0%, #061728 100%)",
+        selectedBackground: "linear-gradient(180deg, #061728 0%, #193F63 100%)",
         title: "Yeni BMW iX1",
         text: "İX1 xLine",
         electricityOption: "All electric",
@@ -136,10 +136,10 @@ const datas = [
           web: {
             mouseOutImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (7).png",
             mouseOverImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (8).png",
-            onSelectImage: "",
+            onSelectImage: "assets/images/fud67x6l0kr2eoms4l562aixzyfe 1 (1).png",
           }
         },
-        selectedBackground: "linear-gradient(180deg, #193F63 0%, #061728 100%)",
+        selectedBackground: "linear-gradient(180deg, #061728 0%, #193F63 100%)",
         title: "Yeni BMW iX3",
         text: "iX3 M Sport",
         electricityOption: "All electric",
@@ -167,10 +167,10 @@ const datas = [
           web: {
             mouseOutImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (9).png",
             mouseOverImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (10).png",
-            onSelectImage: "",
+            onSelectImage: "assets/images/fud67x6l0kr2eoms4l562aixzyfe 1 (2).png",
           }
         },
-        selectedBackground: "linear-gradient(180deg, #5E5E5E 0%, #1A1A1A 100%)",
+        selectedBackground: "linear-gradient(180deg, #1A1A1A 0%, #5E5E5E 100%)",
         title: "Yeni BMW iX",
         text: "iX xDrive40 M Sport",
         electricityOption: "All electric",
@@ -194,10 +194,10 @@ const datas = [
           web: {
             mouseOutImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (9).png",
             mouseOverImage: "assets/images/ssws4gz2ka14vjafolvwyneys0ac 1 (11).png",
-            onSelectImage: "",
+            onSelectImage: "assets/images/fud67x6l0kr2eoms4l562aixzyfe 1 (3).png",
           }
         },
-        selectedBackground: "linear-gradient(180deg, #7C2F37 0%, #450109 100%)",
+        selectedBackground: "linear-gradient(180deg, #450109 0%, #7C2F37 100%)",
         title: "Yeni BMW iX",
         text: "iX xDrive50 M Sport",
         electricityOption: "All electric",
@@ -361,6 +361,8 @@ function onMouseOutCard(e) {
 const showModel = (e) => {
   if (document.getElementsByClassName("models-select-section")[0].style.display == "none") {
     document.getElementsByClassName("models-select-section")[0].style.display = "block";
+    document.getElementById("model-detail-section").innerHTML = "";
+    document.getElementById("model-detail-section").classList.remove("left-to-right-slide-animation"); 
   }
   const prevActiveItem = document.getElementsByClassName("models-nav-item-active")[0];
   prevActiveItem.classList.remove("models-nav-item-active")
@@ -385,9 +387,11 @@ function onClickCard(e) {
   const item = datas.filter(data => data.model === e.id.split(" ")[0])[0].types.filter(item => item.type === e.id)[0]
 
   const sectionToFill = document.getElementById("model-detail-section");
+  document.getElementById("model-detail-section").classList.add("left-to-right-slide-animation"); 
   sectionToFill.style.display = "block";
   sectionToFill.innerHTML = `
-  <div class="model-detail-container">
+  
+  <div class="model-detail-container" style="background: ${item.selectedBackground}">
                 <div class="model-detail-content">
                     <p class="electricity-option-p">${item.electricityOption}</p>
                     <h2>${item.type}</h2>
@@ -417,12 +421,15 @@ function onClickCard(e) {
                             </p>
                         </div>
                     </div>
-                    <div>
+                    <div class="discover-more-div d-flex align-items-center">
+                      <i>
+                          <img src="assets/icons/Path.svg">
+                      </i>
                       <p>Discover more</p>
                     </div>
                 </div>
                 <div class="model-detail-img">
-                    <img src="assets/images/g0dnnfm5dze6pud7f3qvbjvfmwld 1.png">
+                  <img src="${item.images.web.onSelectImage}">
                 </div>
             </div>`
 

@@ -21,7 +21,7 @@ const datas = [
         selectedBackground: "linear-gradient(180deg, #5D0F05 0%,  #A74725 100%)",
         title: "Yeni BMW i4",
         text: "i4 eDrive40 - M Sport",
-        electricityOption: "All electric",
+        electricityOption: "All electric", modelOverviewText: "Tamamen elektrikli ilk Gran Coupé modeli olan Yeni BMW  i4 eDrive40, hafif yapısı aerodinamik tasarımı ve güçlü bataryası sayesinde 590 kilometreye varan bir menzil sunuyor.",
         powerOutput: {
           kW: 250,
           hp: 340
@@ -48,7 +48,7 @@ const datas = [
         selectedBackground: "linear-gradient(180deg, #03091C 0%, #17265E 100%)",
         title: "Yeni BMW i4",
         text: "i4 M50",
-        electricityOption: "All electric",
+        electricityOption: "All electric", modelOverviewText: "Tamamen elektrikli ilk Gran Coupé modeli olan Yeni BMW  i4 eDrive40, hafif yapısı aerodinamik tasarımı ve güçlü bataryası sayesinde 590 kilometreye varan bir menzil sunuyor.",
         powerOutput: {
           kW: 400,
           hp: 544
@@ -80,7 +80,7 @@ const datas = [
         selectedBackground: "linear-gradient(180deg, #7B7772 0%, #A2A09B 100%)",
         title: "Yeni BMW i7",
         text: "i7 xDrive60 M Sport",
-        electricityOption: "All electric",
+        electricityOption: "All electric", modelOverviewText: "Tamamen elektrikli ilk Gran Coupé modeli olan Yeni BMW  i4 eDrive40, hafif yapısı aerodinamik tasarımı ve güçlü bataryası sayesinde 590 kilometreye varan bir menzil sunuyor.",
         powerOutput: {
           kW: null,
           hp: 544
@@ -111,7 +111,7 @@ const datas = [
         selectedBackground: "linear-gradient(180deg, #061728 0%, #193F63 100%)",
         title: "Yeni BMW iX1",
         text: "İX1 xLine",
-        electricityOption: "All electric",
+        electricityOption: "All electric", modelOverviewText: "Tamamen elektrikli ilk Gran Coupé modeli olan Yeni BMW  i4 eDrive40, hafif yapısı aerodinamik tasarımı ve güçlü bataryası sayesinde 590 kilometreye varan bir menzil sunuyor.",
         powerOutput: {
           kW: null,
           hp: 313
@@ -142,7 +142,7 @@ const datas = [
         selectedBackground: "linear-gradient(180deg, #061728 0%, #193F63 100%)",
         title: "Yeni BMW iX3",
         text: "iX3 M Sport",
-        electricityOption: "All electric",
+        electricityOption: "All electric", modelOverviewText: "Tamamen elektrikli ilk Gran Coupé modeli olan Yeni BMW  i4 eDrive40, hafif yapısı aerodinamik tasarımı ve güçlü bataryası sayesinde 590 kilometreye varan bir menzil sunuyor.",
         powerOutput: {
           kW: null,
           hp: 313
@@ -173,7 +173,7 @@ const datas = [
         selectedBackground: "linear-gradient(180deg, #1A1A1A 0%, #5E5E5E 100%)",
         title: "Yeni BMW iX",
         text: "iX xDrive40 M Sport",
-        electricityOption: "All electric",
+        electricityOption: "All electric", modelOverviewText: "Tamamen elektrikli ilk Gran Coupé modeli olan Yeni BMW  i4 eDrive40, hafif yapısı aerodinamik tasarımı ve güçlü bataryası sayesinde 590 kilometreye varan bir menzil sunuyor.",
         powerOutput: {
           kW: null,
           hp: 326
@@ -200,7 +200,7 @@ const datas = [
         selectedBackground: "linear-gradient(180deg, #450109 0%, #7C2F37 100%)",
         title: "Yeni BMW iX",
         text: "iX xDrive50 M Sport",
-        electricityOption: "All electric",
+        electricityOption: "All electric", modelOverviewText: "Tamamen elektrikli ilk Gran Coupé modeli olan Yeni BMW  i4 eDrive40, hafif yapısı aerodinamik tasarımı ve güçlü bataryası sayesinde 590 kilometreye varan bir menzil sunuyor.",
         powerOutput: {
           kW: null,
           hp: 523
@@ -362,7 +362,7 @@ const showModel = (e) => {
   if (document.getElementsByClassName("models-select-section")[0].style.display == "none") {
     document.getElementsByClassName("models-select-section")[0].style.display = "block";
     document.getElementById("model-detail-section").innerHTML = "";
-    document.getElementById("model-detail-section").classList.remove("left-to-right-slide-animation"); 
+    document.getElementById("model-detail-section").classList.remove("left-to-right-slide-animation");
   }
   const prevActiveItem = document.getElementsByClassName("models-nav-item-active")[0];
   prevActiveItem.classList.remove("models-nav-item-active")
@@ -381,17 +381,14 @@ function onClickCard(e) {
   prevActiveItem.classList.remove("models-nav-item-active");
   document.getElementById(e.id.split(" ")[0] + "-nav-button").classList.add("models-nav-item-active");
 
-  const selectedModelName = e.id;
-  console.log(selectedModelName);
-
   const item = datas.filter(data => data.model === e.id.split(" ")[0])[0].types.filter(item => item.type === e.id)[0]
 
   const sectionToFill = document.getElementById("model-detail-section");
-  document.getElementById("model-detail-section").classList.add("left-to-right-slide-animation"); 
+  document.getElementById("model-detail-section").classList.add("left-to-right-slide-animation");
   sectionToFill.style.display = "block";
   sectionToFill.innerHTML = `
-  
-  <div class="model-detail-container" style="background: ${item.selectedBackground}">
+  <div class="model-detail-part" style="background: ${item.selectedBackground}">
+  <div class="model-detail-container">
                 <div class="model-detail-content">
                     <p class="electricity-option-p">${item.electricityOption}</p>
                     <h2>${item.type}</h2>
@@ -421,16 +418,41 @@ function onClickCard(e) {
                             </p>
                         </div>
                     </div>
-                    <div class="discover-more-div d-flex align-items-center">
-                      <i>
-                          <img src="assets/icons/Path.svg">
+                    <button onclick="onDiscoverMoreButtonClick(this)" class="discover-more-button d-flex align-items-center">
+                      <i id="discover-img-wrapper" class="position-relative">
+                          <img id="discover-more-icon" src="assets/icons/Path.svg">
                       </i>
-                      <p>Discover more</p>
-                    </div>
+                        <p>Discover more</p>
+                    </button>
                 </div>
                 <div class="model-detail-img">
                   <img src="${item.images.web.onSelectImage}">
                 </div>
-            </div>`
+            </div>
+            <div id="model-overview">
+              <h2>MODEL OVERVIEW</h2>
+              <p>${item.modelOverviewText}</p>
+              <button class="model-visit-web-button"><span>Visit web</span></button>
+            </div>
+            </div>
+            `
+}
 
+function onDiscoverMoreButtonClick(e) {
+  const itemToChangeDisplay = document.getElementById("model-overview");
+  const discoverMoreIcon = document.getElementById("discover-more-icon");
+  const currentSection = document.getElementById("model-detail-section")
+  if (!itemToChangeDisplay.classList.contains("top-to-bottom-slide-animation")) {
+    itemToChangeDisplay.classList.add("top-to-bottom-slide-animation");
+    itemToChangeDisplay.classList.remove("bottom-to-top-slide-animation");
+    itemToChangeDisplay.style.height = "50%"
+    discoverMoreIcon.style.transform = "rotate(90deg)"
+    currentSection.style.height = "540px"
+  } else {
+    itemToChangeDisplay.classList.remove("top-to-bottom-slide-animation");
+    itemToChangeDisplay.classList.add("bottom-to-top-slide-animation");
+    itemToChangeDisplay.style.height = "0"
+    discoverMoreIcon.style.transform = ""
+    currentSection.style.height = "342px"
+  }
 }

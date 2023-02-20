@@ -205,7 +205,7 @@
             <div class="models-select-container">
                 <div class="swiper parent-slider">
                     <div id="parent-swiper-wrapper" class="swiper-wrapper">
-                    <!-- Filled in index.js -->
+                        <!-- Filled in index.js -->
                     </div>
                     <!-- If we need scrollbar -->
                     <div class="swiper-pagination"></div>
@@ -213,8 +213,58 @@
             </div>
         </section>
         <section id="model-detail-section">
-            <div class="model-detail-container d-none">
-                <!-- Filled onclick in index.js-->
+            <!-- Filled onclick in index.js-->
+        </section>
+        <section id="section-02">
+            <div class="group-02">
+                <div class="texts d-flex flex-column">
+                    <h2 class="title"><span>02</span> KIYASLANACAK OTOMOBİLİN VERİLERİNİ GİRİN.</h2>
+                    <p class="text text-dark">Enter your personalised annual or monthly mileage below, add the details
+                        of your current motoring and electricity costs, and see how much you could save in fuel
+                        costs. Please note, this tool provides an indicative estimate only. Actual results will vary
+                        according to a number of variable factors, including your mileage driven, your fuel and
+                        electricity costs, your charging methods, and driving conditions and style. <span>Find out more
+                            here.</span>
+                    </p>
+                </div>
+                <div class="comparing-oto-data-container">
+                    <div class="comparing-oto-inputs d-flex">
+                        <div class="fuel-type-inputs d-flex flex-column">
+                            <p class="text-dark">Yakıt tipi</p>
+                            <div class="d-flex">
+                                <div class="fuel-type-options">
+                                    <input type="radio" id="benzin" name="fuel-type" value="Benzin" checked>
+                                    <label for="benzin">Benzin</label>
+                                </div>
+                                <div class="fuel-type-options">
+                                    <input type="radio" id="dizel" name="fuel-type" value="Dizel">
+                                    <label for="dizel">Dizel</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rest-of-inputs d-flex flex-wrap">
+                                    <div class="d-flex flex-column">
+                                        <label for="fname">Litre Başına Yakıt Maliyeti</label>
+                                        <input type="text" id="fname" name="firstname" placeholder="20,17 TL">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="lname">Aracın Ort. Yakıt Tüketimi</label>
+                                        <input type="text" id="lname" name="lastname" placeholder="0,lt/100 km">
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="country">Country</label>
+                                        <select id="country" name="country">
+                                            <option value="australia">10.000(km)</option>
+                                            <option value="canada">Canada</option>
+                                            <option value="usa">USA</option>
+                                        </select>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="electrical-trip-data-container">
+
+                </div>
             </div>
         </section>
     </main>

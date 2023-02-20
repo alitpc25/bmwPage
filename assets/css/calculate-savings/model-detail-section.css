@@ -7,16 +7,40 @@
     animation: leftToRightSlide 1.5s;
 }
 
-.model-detail-container {
+@keyframes topToBottomSlide {
+    from {height:0%; opacity: 0; display: none}
+    to {height: 50%; opacity: 1; display: flex}
+}
+
+.top-to-bottom-slide-animation {
+    animation: topToBottomSlide 1s;
+}
+
+@keyframes bottomToTopSlide {
+    from {height:50%; opacity: 1; display: flex}
+    to {height: 0%; opacity: 0; display: none}
+}
+
+.bottom-to-top-slide-animation {
+    animation: bottomToTopSlide 1s;
+}
+
+.model-detail-part {
     max-width: 1187px;
     height: 342px;
     margin: 0 auto;
-    padding-right: 2vw;
+    margin-bottom: 100px;
+}
+
+.model-detail-container {
+    overflow: hidden;
+    height: 342px;
     display: flex;
-    padding-left: 3vw;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    padding-top: 52px;
+    padding-right: 2.5vw;
+    padding-left: 3vw;
 }
 
 .model-detail-container .model-detail-img {
@@ -81,8 +105,11 @@
     border-left: none;
     padding-left: 0;
 }
+.model-detail-container {
+    margin-bottom: 24px;
+}
 
-.model-detail-content .discover-more-div p {
+.model-detail-content .discover-more-button p {
     margin: 0;
     font-weight: 700;
     font-size: 14px;
@@ -90,11 +117,61 @@
     padding-left: 20px;
 }
 
-.model-detail-content .discover-more-div {
+.model-detail-content .discover-more-button {
     margin-top: 50px;
     text-align: center;
+    outline: none;
 }
 
-.model-detail-content .discover-more-div i img {
+.discover-more-button:hover > i img {
+    transition: 0.4s;
+    transform: translateX(12px);
+}
+
+.model-detail-content .discover-more-button i img {
     filter: invert(94%) sepia(98%) saturate(0%) hue-rotate(310deg) brightness(103%) contrast(105%);
+    width: 10px;
+}
+
+#model-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+    height: 0;
+}
+
+#model-overview h2 {
+    font-size: 26px;
+    line-height: 35px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #262626;
+}
+
+#model-overview p {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.4px;
+    color: #262626;
+}
+
+.model-visit-web-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 285px;
+    height: 49px;
+    background-color: #1C69D4;
+    gap: 49px;
+    color: white;
+
+}
+
+.model-visit-web-button span {
+    font-family: BMWTypeNext-Light;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 33px;
 }

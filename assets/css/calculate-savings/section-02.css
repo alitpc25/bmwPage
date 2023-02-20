@@ -1,0 +1,78 @@
+#section-02 {
+    margin-left: 129px;
+    margin-right: 113px;
+    margin-top: 47px;
+}
+
+.group-02 {
+    font-family: BMWTypeNext-Light;
+}
+
+.group-02 .texts .title {
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.group-02 .texts .title span {
+    color: #BBBBBB;
+}
+
+.group-02 .texts .text {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.4px;
+    color: #262626;
+}
+
+.comparing-oto-data-container .fuel-type-inputs input:after {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    top: -4px;
+    left: -4px;
+    position: relative;
+    background-color: #FFFFFF;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #8E8E8E;
+}
+
+.comparing-oto-data-container .fuel-type-inputs input:checked:after {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    top: -4px;
+    left: -4px;
+    position: relative;
+    background-color: #BBD2F2;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 9px solid #1B69D5;
+}
+
+.comparing-oto-data-container .fuel-type-inputs label {
+    margin-left: 13px;
+}
+
+.comparing-oto-data-container .fuel-type-options:last-child {
+    margin-left: 27px;
+}
+
+.comparing-oto-data-container .fuel-type-inputs {
+    width: 40%;
+}
+
+.comparing-oto-data-container .rest-of-inputs {
+    width: 60%;
+    column-gap: 100px;
+    row-gap: 20px;
+}
+
+.comparing-oto-data-container .rest-of-inputs > div > input, select {
+    width: 304px;
+    height: 47px;
+}

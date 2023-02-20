@@ -23,11 +23,11 @@
     color: black;
 }
 
-.models-nav-item:focus {
+.models-nav-item-active {
     outline: none;
     border-bottom: 4px solid#1C69D4;
 }
 
-.models-nav-item:focus a {
+.models-nav-item-active a {
     font-family: BMWTypeNext-Bold;
 }

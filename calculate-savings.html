@@ -180,24 +180,24 @@
         <section class="models-nav-section">
             <div class="models-nav-container d-flex justify-content-center">
                 <div class="models-nav d-flex justify-content-between align-items-center">
-                    <button autofocus onclick="showModel(this)" class="models-nav-item models-nav-item-active cursor-pointer">
+                    <div onclick="showModel(this)" class="models-nav-item models-nav-item-active cursor-pointer">
                         <a>All</a>
-                    </button>
-                    <button onclick="showModel(this)" class="models-nav-item cursor-pointer">
+                    </div>
+                    <div id="i4-nav-button" onclick="showModel(this)" class="models-nav-item cursor-pointer">
                         <a>i4</a>
-                    </button>
-                    <button onclick="showModel(this)" class="models-nav-item cursor-pointer">
+                    </div>
+                    <div id="i7-nav-button" onclick="showModel(this)" class="models-nav-item cursor-pointer">
                         <a>i7</a>
-                    </button>
-                    <button onclick="showModel(this)" class="models-nav-item cursor-pointer">
+                    </div>
+                    <div id="iX1-nav-button" onclick="showModel(this)" class="models-nav-item cursor-pointer">
                         <a>iX1</a>
-                    </button>
-                    <button onclick="showModel(this)" class="models-nav-item cursor-pointer">
+                    </div>
+                    <div id="iX3-nav-button" onclick="showModel(this)" class="models-nav-item cursor-pointer">
                         <a>iX3</a>
-                    </button>
-                    <button onclick="showModel(this)" class="models-nav-item cursor-pointer">
+                    </div>
+                    <div id="iX-nav-button" onclick="showModel(this)" class="models-nav-item cursor-pointer">
                         <a>iX</a>
-                    </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -205,10 +205,16 @@
             <div class="models-select-container">
                 <div class="swiper parent-slider">
                     <div id="parent-swiper-wrapper" class="swiper-wrapper">
+                    <!-- Filled in index.js -->
                     </div>
                     <!-- If we need scrollbar -->
                     <div class="swiper-pagination"></div>
                 </div>
+            </div>
+        </section>
+        <section id="model-detail-section">
+            <div class="model-detail-container d-none">
+                <!-- Filled onclick in index.js-->
             </div>
         </section>
     </main>

@@ -1,0 +1,67 @@
+.model-detail-container {
+    background: linear-gradient(180deg, #A74725 0%, #5D0F05 100%);
+    max-width: 1187px;
+    height: 342px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.model-detail-container .model-detail-img {
+    align-self: flex-end;
+}
+
+.model-detail-container h2, p {
+    color: white;
+    font-style: normal;
+    font-weight: 300;
+    font-family: BMWTypeNext-Light;
+}
+
+.model-detail-content {
+    width: 443px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.model-detail-content .electricity-option-p {
+    font-family: BMWTypeNext-Bold;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.model-detail-content h2 {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 46px;
+}
+
+.model-detail-info .model-detail-data-value {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.model-detail-info .model-detail-data-name {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.model-detail-info div {
+    border-left: 1px solid white;
+}
+
+.model-detail-info {
+    width: 550px;
+    gap: 20px;
+}
+
+.model-detail-info div p {
+    padding: 0;
+    margin: 0;
+}
+
+.model-detail-info div:first-child {
+    border-left: none;
+}
